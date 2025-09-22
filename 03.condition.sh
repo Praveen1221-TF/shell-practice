@@ -4,7 +4,9 @@ NUM=$1
 
 if [ $NUM -lt 20 ]; then
     echo "given number $NUM is less than 10"
-else
+else if
     echo "given number $NUM is greater than 10"
+else
+    echo "given number $NUM is equal to $Num"                   
 fi    
 
