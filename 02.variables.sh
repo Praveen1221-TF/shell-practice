@@ -2,11 +2,13 @@
 
 #variables
 
-CURRENT_DATE=$(date +"%y-%m-%d")
-CURRENT_USER='whoami'
+#!/bin/bash
 
-echo "Today date :$CURRENT_DATE"        
-echo "current user:$CURRENT_USER"
-
+echo "Script name: $0"
+echo "First argument: $1"
+echo "All arguments: $@"
+echo "Number of arguments: $#"
+echo "Exit status of last command: $?"
+echo "Process ID of current shell: $$"
 
 
