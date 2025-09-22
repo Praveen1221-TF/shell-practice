@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Hi Praveen"
-Echo "Hlo praveen"
+echo "Hlo praveen"
