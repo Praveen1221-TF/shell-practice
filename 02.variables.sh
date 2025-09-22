@@ -2,9 +2,11 @@
 
 #variables
 
-PERSON1=$1
-PERSON2=$2
+CURRENT_DATE=$(date +"%y-%m-%d")
+CURRENT_USER='whoami'
+
+echo "Today date :$CURRENT_DATE"        
+echo "current user:$CURRENT_USER"
 
 
-echo "$PERSON1:: Hi WELCOME TO INDIA $PERSON2"
-echo "$PERSON2:: Hlo THANK YOU $PERSON1"
+
