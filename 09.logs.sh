@@ -4,6 +4,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+USERID=$(id -u)
+
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1,2 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
