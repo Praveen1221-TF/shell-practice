@@ -29,7 +29,7 @@ VALIDATE(){
 
 }
 
-dnf list install mysql &>>$LOG_FILE
+dnf list install mysql -y &>>$LOG_FILE
 if [ $? -ne 0 ]; then
     dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "MYSQL"
