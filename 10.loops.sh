@@ -32,8 +32,9 @@ for package in $@
 do  
     dnf list installed $package &>>$LOG_FILE
 
-    if [ $? -ne 0 ];then
+    if [ $? -ne 0 ]; then
         dnf install $package -y >>$LOG_FILE
     else
         echo " $package is already installed $R...Skipping $N "
+    fi
 done    
