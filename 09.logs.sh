@@ -6,7 +6,7 @@ N="\e[0m"
 
 USERID=$(id -u)
 
-LOGS_FOLDER= "/var/log/shell-script"
+LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(basename "$0" .sh)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
