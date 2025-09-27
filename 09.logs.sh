@@ -10,7 +10,7 @@ LOGS_FOLDER= "/var/log/shell-script"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1,2 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-mkdir -p LOGS_FOLDER
+mkdir -p $LOGS_FOLDER
 echo "script started excuted at : $(date)"
 
 if [ $USERID -ne 0 ]; then        
