@@ -34,7 +34,8 @@ do
 
     if [ $? -ne 0 ]; then
         dnf install $package -y >>$LOG_FILE
+        VALIDATE $? "$package"
     else
-        echo " $package is already installed $R...Skipping $N "
+        echo -e " $package is already installed $R...Skipping $N "
     fi
 done    
