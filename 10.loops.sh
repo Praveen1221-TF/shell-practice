@@ -30,5 +30,5 @@ VALIDATE(){
 
 for package in $@
 do  
-    echo "package is : $package
+    echo "package is : $package"
 done    
