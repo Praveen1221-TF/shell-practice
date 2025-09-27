@@ -11,7 +11,7 @@ SCRIPT_NAME=$(basename "$0" .sh)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" 
 
 mkdir -p $LOGS_FOLDER
-echo "script started excuted at : $(date)"
+echo "script started excuted at : $(date)" | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ]; then        
     echo "Error: please run the script with root user"
@@ -30,5 +30,10 @@ VALIDATE(){
 
 for package in $@
 do  
-    echo "package is : $package"
+    dnf list installed $package &>>$LOG_FILE
+
+    if [ $? -ne 0 ];then
+        dnf install $package -y >>$LOG_FILE
+    else
+        echo " $package is already installed $R...Skipping $N "
 done    
